@@ -1,0 +1,39 @@
+<=====LIST=====>
+- [sequence or numbers of values seperated by commas]
+- lists are mutable & ordered collection of data that allow duplicate values 
+- list = ['a' , 2 ,4 ,'x'] 
+
+dir([])
+help([]) 
+list[]  		>>>>>indexing access elements of a list 
+list[x] = "x"		>>>>update the list
+list[start:stop(excluded):step] 	        >>>> slicing  extracting a portion of a list
+len(list)
+list * 2    			print list multiple times 
+list1 + list2 			print concatenated lists 
+
+NOTE : multiplication and addition dont affect the original list (you can store in New list) 
+
+min()
+max() same data types 
+
+list.append("x") 		to the end of list
+list.extend([41, 22 ,"xx"])	list to another list
+list.insert(index, "new value") add new item at specified position/index
+
+list.clear()
+list.copy()
+list.index("x")
+list.count(x)
+
+list.pop(index)  		 default last item
+list.remove("value")	 	removes first occurrance of value 
+del list[]
+
+list.reverse()			descending order
+list.sort()   		 	ascending order
+
+sorted(list)          Not only display , it also creates a list 
+sorted(list,reverse = True)
+
+NOTE : min() - max() - sort() - reverse() must be the same data types 

@@ -1,0 +1,100 @@
+to open a file   :   open (path,r)   read is the defualt ##creates a file object 
+to access its contect : .read()
+to close the file : .close()
+
+## open function returns a file object, which is a Python object through which Python interacts with the file itself.
+## opening  a file object is like opening a window to lokk into a file 
+
+
+to write to a file : 
+open(path,w)
+.write()
+.close()
+
+
+to auto-closes a file :
+
+with open(path,r) as file :
+	file.read(5)
+
+
+<======File Operations=====>  
+file :is a named location on disk to store related information 
+
+<======File Types======>
+- Text : squence of lines(line squence of characters) it knows as code or syntax
+
+- Binary : store data after coverting it into a binary language (0,1) - files dont contain Text
+
+<======Process of R/W a Text File======>
+- Open a file 
+- Read or Write Operations 
+- Close the file 
+
+<======Open======>
+ls 
+pwd
+open(fullPath,access_mode, encoding) 	 ##creates a file object
+
+Access_Mode :
+"r"  read    default mode 
+"w"  write   
+"a"  append 
+"x"  exclusive create = "w" ,only it raises and expection if the file already exists 
++    open for reading along with other operations  w+ r+ a+
+
+text file is the default mode  but if u are dealing with Binary file u have to define b as mode 
+rb - wb - ab - ab+ - wb+
+
+Encoding :
+windows : cp1252
+linux : utf-8
+
+myfile.mode    check out access_mode
+
+\n \t \U
+NOTE : while openning a file , in windows path these characters will raise an exception , u must escape all the backslashes 
+'C:\\Users\\User\\file.py' 
+
+<======Write======>
+
+open in write mode
+file.write("") 
+file.writelines([sequence of arguments])  tuple or list
+
+open in append mode 
+file.write("")
+
+<======Read======>
+
+file.tell()   current cursor postion 
+file.seek(0)  change cursor postion
+
+file.read(x)
+readline()      line at a time 
+readlines()	returns a list
+readlines()[]or[:]
+
+<======Close======>
+
+file.close()
+file.closed 	close attribute returns True or False 
+
+<======With Statement======>	
+
+- Closes file automatically 
+
+with open("test.txt") as file:       create a file object
+	data=file.read()
+	print(data)
+
+
+NOTE : if u got no result , check for cursor (file.seek(0))
+
+<=======Delete========>
+len(file.read())
+
+you have to open it in writing mode (r+)
+
+file.truncate()		delete all 
+file.truncate(x)  	leave x number of characters and delete the rest of characters 

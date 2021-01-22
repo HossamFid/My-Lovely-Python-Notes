@@ -1,0 +1,51 @@
+<=====TUPLE=====>
+
+immutable lists - ordered & non- unique  means duplicate nad indexing are allowed 
+
+- (numbers of values seperated by commas) 
+- tuples are immutable that means once created cant be modified
+- tuples are more faster than lists - occupy less memory than lists 
+- tuples are kind of Read-Only lits 
+ 
+my_tuple = ()
+my_tuple[]
+my_tuple[::]
+
+in 
+not in
+
+dir(())
+help(())
+
+NOTE : no add , remove or modify  etc...  cuz its immutable
+
+------------
+Tuple assignment (unpacking) :
+
+assign tuple of varibales of a tuple of values and map them together
+
+
+tuple1 = ("hossam", "24" , "python")
+(name, age ,lang)= tuple1
+
+OR 
+
+("hossam", "24" , "python") = (name, age ,lang)
+
+NOTE : must be same no. of elements
+-----------
+min()
+max() 
+
+tuple.count(x)
+tuple.index(x)
+
+tuple * 2    			print tuple multiple times 
+tuple1 + tuple2 		print concatenated tuples
+
+del tuple 			delete entire tuple
+
+NOTE : when u are creating a tuple of single item , it actually dont create a tuple but instead
+ceates an inter or string to avoid this use comma in the end 
+
+tiny_tuple=(a,) 

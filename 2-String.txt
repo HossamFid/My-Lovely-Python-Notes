@@ -1,0 +1,71 @@
+--------
+String 
+
+sequence of characters, numbers or other characters like $ spaces enclosed with ' , " or ''' 
+
+'x' - "x"
+'this is the world\'s best lanugage' escape 
+"this is the world's best lanugage"
+'''
+line 1\
+line 2\
+line 3 
+'''' 
+----------
+Structre :
+
+- indexing starts with (from left): ZERO []
+- indexing starts with (from right) : -1 
+- Slicing : access items from within a sequence of data by index numbers [start:end(exclusive):step]
+- immutable 
+
+----------
+Methods :
+
+str.len()
+str.index(x)
+str.count(x)
+
+str.capitalize() 
+str.upper()
+str.lower()
+
+str.isalnum()
+str.startswith(x)
+str.ednswith(x)
+
+str.strip() removes white spaces from starting and ending 
+str.strip(x)
+str.lstrip()
+str.rstrip()
+
+str.split(",") break the string (delimiter) - returns a list 
+
+"char".join(str)  insert a character
+
+str.replace("xxx"."zzz") replace all instances 
+str.replace("xxx"."zzz",1) replace first instance of "xxx" with "zzz"
+
+str.find(x)  can narrow down using indexing - returns -1 means not found
+ 
+-------------
+Operators & Formatting
+
+string concatenation +
+string replication   *
+
+"char" is  - is not  string 
+
+Formating a string (make it Dynamic) :
+statment="my name is {} and you are learing {} using version {}"
+statment="my name is {2} and you are learing {0} using version {1}"
+print(statment.format("Hossam","Python",3))  
+------
+model = "2600XM"
+slots = 4
+ios = 12.3
+
+f"cisco model : {model}, {slots} WAN slots, IOS {ios}"
+f"cisco model : {model.lower()}, {slots *2} WAN slots, IOS {ios}"  another way
+
+

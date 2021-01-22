@@ -1,0 +1,199 @@
+
+
+<======Functions======> 
+
+- we often encounter situations in which we need to perform a calculation again and again
+- functions help to break our program into smaller and modular chunks 
+- function is a group of related statements that perfrom a specific task 
+
+======Function Types====== 
+1- Built-in functions  dir() - help() - range() - type() etc....
+2- User-defined functions  
+
+def my_func():
+	this is docstring
+	print(hello world)
+
+def my_func():
+	pass 
+
+__doc__  descibes your funcion - module - class 
+print(my_func.__doc__) User-derfined
+print(range.__doc__)   Built-in
+
+======Function Calling====== 
+my_func()
+
+======Function Argumetns======  
+- sometimes we need a custom behaviour from our function for this we have to pass some argumets when we calling it 
+
+def my_func(name):
+	print(hello , name)
+
+my_func(hossam) 
+
+NOTE : throw an error without any argument
+
+======Default Argumetns====== 
+def my_func(name=Hossam):
+	print(hello , name)
+
+my_func(hossam)
+my_func()        
+
+NOTE : no errors cuz i have Default argument 
+
+
+names=[hossam,fid,hatem]
+
+def say_hello(name=hossam):
+    for name in names
+        print(hello, name)
+
+
+say_hello(names)
+
+======Multiple Argumetns====== 
+
+def cred(name=hossam,age=24):
+    if age =18
+        print(hello big boy,name ,you are over age)
+    else
+        print(Opssss!!! , name ,you are under age sorry !!!!)
+
+cred(hatem,30)  these arguments are called  ===Positional Arguments=== 
+
+======Body Mass======
+#body mass index 
+
+def bodyMass(name,weight,height):
+    bmi=weight(heightheight)
+    if bmi18.5
+        print(mrms,name,your bmi is ,bmi,unluckily!!! you are underweight)
+    elif 18.5= bmi 24.9
+        print(mrms,name,your bmi is ,bmi,luckily for u , your weight is normal)
+    elif 25.0= bmi 29.9
+        print(mrms,name,your bmi is ,bmi,Ops!! , you are fat)
+    else
+        print(mrms,name,your bmi is ,bmi,OMG!! , you are Panda hhhhhhhh)  
+
+your_name=str(input(what is your first name   ))
+your_weight=int(input (What's your weight  (in KG)  )) 
+your_height=float(input(What's your height (in M)  ))
+
+bodyMass(your_name,your_weight,your_height) ===Positional Arguments===
+bodyMass(name=hossam,height=1.63,weight=60)  ===Keyword Arguments===
+
+======Store Function Output======
+
+def myFunc(n1,n2):
+    return(n1+n2)   store for later usage
+
+sum=myFunc(4,4)
+print(sum)
+   
+======Arbitrary Arguments======  
+
+- dont know how many paramerters or there are too many parameters
+args   - Tuple 		(Positional Arguments)		
+kargs  - Dictionary  	(Keyword Arguments)
+
+def myFunc(args)
+	print(args)
+myFunc(12,34,65,123,766)
+
+def myFunc(fav_dishes):
+	print(fav_dishes)
+	for key,value in fav_dishes.items()
+		print(key, likes to eat, value)
+myFunc(sam=chips, hatem=burger)
+
+order of using args, args and kargs
+myFunc(args, args , kargs)
+
+======Namespaces====== 
+- Built-in namespace
+len() - dir() - max() etc...
+
+- Global namespace
+my_var = 10			global variable 
+
+- Local namespace 
+for i in range(10):
+	my_var = 5   		local variable 
+	print(i + my_var)
+
+myVar=10
+def myFunc():			to import a global variable inside a function
+	global myVar
+	print(myVar)
+	myVar=5
+myFunc()
+
+def myFunc():
+	myVar=5
+	return myVar     
+myFunc()
+in order to use myVar outside the Function 
+
+result = myFunc()
+
+-----------------
+
+
+<=======Module=======> 
+
+simple text file containing some python code (txt.py) ,it acts as code library 
+
+- it contains functions, classes , variables and other python statements (can use as python script also) 
+- its a piece of software that has a specific functionality
+
+
+
+import myModule 
+from myModules import addition, division	 import specific functions 
+from myModules import my_var			 import specific variables 
+from myModules import *				 all namespaces 
+
+
+dir() import module first
+help()
+
+
+myModule.addition(x,y)  	use specific function 
+
+import myModule as mod  	Aliasing modules 
+
+	
+if __name__ == "__main__":
+    # execute only if run as a script  (running the module as standalone application)
+    main()
+For a package, the same effect can be achieved by including a __main__.py module
+
+<========Packages=======>
+- Packages are namespaces which contain multiple packages and modules themselves
+- each package in python is a Directory MUST contain a special file called __init__.py 
+- this file can be empty and it indicates that the directiry it contains a Python Package
+so it can be imported the same way a module can be imported 
+  
+<========Python Standard Library=======>
+https://docs.python.org/3/library/
+Example : math , calendar , datetime , sys , tkinter
+<========PIP install=======>  
+install non built-in modules (PIP package manager)
+
+pip install packageName
+python -m pip install openpyxl
+
+from packageName import *
+
+python -m pip install --upgrade pip
+
+<========Module Search Path=======> 
+Python standard library  
+Current Directory 
+Sys.Path
+
+import sys
+sys.path
+sys.path.append(r'P\A\T\H')  last for the end of your session (until exit)  

@@ -1,0 +1,39 @@
+
+<=========Sets========>
+
+unordered collection of unique elements (lists that have no duplicate elements) - mutable
+
+my_set = {} 
+
+list = []
+set(list)
+
+in - not in 
+
+NOTE : wont add and item  that already exists (no error occurs)
+
+---------
+Methods 
+
+len()
+
+set1.intersection(set2)   common between    
+set1.difference(set2)
+set1.union(set2) 
+
+set.add(x)
+set.remove(value)
+set.pop()   remove random element
+set.clear()
+
+
+<=========Frozen Sets========>
+
+immutable sets - elements of frozen sets can be use inside another set or as a Key Dectionary
+
+list = []
+frozenset(list)
+
+set1.intersection(set2)   common between    
+set1.difference(set2)
+set1.union(set2) 

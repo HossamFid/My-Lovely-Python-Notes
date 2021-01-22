@@ -1,0 +1,249 @@
+
+
+<=====Comparison=====>
+
+compare 2 or more properties and then take a decision accordingly
+
+comparsion operators :
+- <, <= - >, >= - ==, != - is, isnot (equality -not only just compare 2 values but its identity)
+- strings are case sensitive 
+- str.casefold()   case insensitive 
+- list1=[11,12]  list2=[11,12]  list1 is list2 => False cuz of its identity  id(list1) id(list2)
+
+logical operators :
+compare multiple conditions 
+- AND - OR -NOT
+
+<=====Condtional | Decision Making=====>
+
+
+if a>b :
+	STATEMENT_A
+elif a<b :
+	STATEMENT_B
+else :
+	STATEMENT_C
+
+NOTE :zero and null values are False values 
+
+
+---------------------------------------
+---------------------------------------
+Iteration & Loop Control 
+
+- we need to repeat the same steps mulitple times 
+
+<=====FOR Loop=====>
+- for loop processes each item in a squence , so it is used with python's sequence data types : strings - lists - tuples  
+- iterate over a squence and execute piece of code 
+
+for LOOP_VARIABLE in SEQUENCE :
+	STATEMENTS
+
+for friend in ["SAM", "JACK", "BRAN"] :
+	greet = "Hi" + "friend" + ". How are you"
+	print(greet)
+
+we assign each value in [] to friend - this allows us to use 1 item at a time in squential order 
+- we want elements available on first 10 positions ==>range(10)<== 
+
+for i in range(1:10:2):   
+	pass => this statement will be skipped  
+---------------------------------------
+---------------------------------------
+
+access List items by index number using range function :
+
+bigList =[22, 535, 436,7,867, 45]
+for i in range(len(bigList)):
+	print (bigList[i])
+---------------------------------------
+---------------------------------------
+
+usig both the index and the element value as iterating variables :
+bigList =[22, 535, 436,7,867, 45]
+
+for index, element in enumerate(bigList):
+	print(index, element) 
+---------------------------------------
+---------------------------------------
+using else 
+for i in range(5):
+	print(i)
+else :
+	print("finish")   when the for loop has finished the entire execution 
+
+- for Loop execute a set of instruction for a specified number of iteration and then Control comes out of the loop (END)
+
+<=====WHILE Loop=====>
+- while Loop execute a set of intruction until and unless a given condition is TRUE
+
+While  BOOLEAN_EXPRESSION :
+	STATEMENTS
+i=0
+while i<5:
+	print(i)
+	i+=1       increment it by 1 (avoid infinte loop)
+---------------------------------------
+---------------------------------------
+
+While True:
+	STATEMENTS
+---------------------------------------
+---------------------------------------
+while condtion :
+	STATEMENTS
+else:			when the condition false 
+	STATEMENTS  
+---------------------------------------
+---------------------------------------
+Loop Control Statements :
+
+1- Pass : Dont want to execute any code  (do nothing - for later usage)
+
+2- Break : terminates the loop statements and transfers the execution to the following (for only the most outer near loop)
+for i in range(1,22):
+	if (i==19):		
+		break
+	else:
+		print(i)
+print("End of the Loop")
+
+3- Continue :  skip the rest of code inside a loop for the current iteration only - so loop doenst terminate 
+
+#Zip Function, It is used to join multiple Iterables collections
+
+programmer=["hossam", "jack", "john"]
+favorite_language=["Python 2.7","PowerShell 5.0","Python 3.7","Java"]
+experience=[3 ,1 ,5]
+
+for prog,fav,exp in zip(programmer, favorite_language,experience):
+    print(prog, "likes to code in",fav,"and has been doing so from",exp, "years " )
+
+---------------------------------------
+---------------------------------------
+
+NESTING : the intended code below the if statement should be executed only if BOTH the inner statement and the outer statement are evaluated as True
+
+x="HOssam"
+if "H" in x :
+	if  len(x) > 3 :
+		print("Done")
+
+iterate over 2 lists
+list1 =[]
+list2 =[]
+for i in list1:
+	for k in list2 :
+		print(i * k)
+
+x = 1 
+while x <= 10 :
+	z=5
+	x+=1
+	while z <= 10 :
+		print(z)
+		z+=1
+
+for num in range(10):
+	if 5 <= num <=9:	
+		print(num)
+
+---------------------------------------
+---------------------------------------
+
+in python u may encounter 2 main types of errors : Syntax error - Exception 
+
+Exception Handling 
+
+An Exception is an event which occurs during the execution of a program that distrups the normal 
+flow of the program's instructions 
+
+""https://www.tutorialspoint.com/python/python_exceptions.htm""
+
+- Error detected during execution are Called Exceptions 
+- its diffrent from a Syntax Error 
+- whithout Handling the Exception the program is not going to notify you but will simply crash 
+
+---------
+--------
+radius=float(input("Enter the radius of your Sephere(in CM) : "))
+area =4 * 3.14 * radius * radius 
+
+print("area is : ", area )  but we arent sure that the user will follow the instruction (Error Handling Time)
+---------
+--------
+
+<=====Exception Handling=======>
+
+Try : those statements which may lead to an Exception | potentially dangerous code
+
+Except: execute this code when there is an exception  | handle some Exception 
+here you can print Error message 
+Send email to support message 
+Error popup
+call another logic/function 
+
+Else : no Exception occurred ? Run this code 
+
+Finally : always get executed 
+---------
+--------
+try:
+    radius=float(input("Enter the radius of your Sephere(in CM) : "))
+except:
+    print("it looks like you have not entered a vailed number , Please kindly Enter one ^_^")
+else :
+    area =4 * 3.14 * radius * radius 
+    print("area is : ", area )
+---------
+--------
+custom Error
+
+try:
+    num=int(input("enter your fav number : "))
+    if num==0:
+        raise ValueError(" Seriouslyyyyyy ^_^ ") (custom Error)
+except:
+    print("it looks like you have not entered a vailed number , Please kindly Enter one ^_^")
+      
+else:
+    print("now we got your fav number :", num)
+---------
+--------
+access the original Error message in exception block
+
+try:
+    res=10/0
+except Exception as E:    (access)
+    print("Error message : ",E) 
+else:
+    print("Thank u very much ")
+     
+---------
+-------
+finally 
+
+def res(x,y):
+    try:
+        div=int(x / y)
+    except Exception as error:
+        print("not working , sorry :",error)
+    else:
+        return(div)
+    finally:
+        print("we are finished ")
+res(10,2)
+
+
+for i in range(5):
+	try:
+		print(i/0)
+	except ZeroDivisionError as e :
+		print(e, "Division by 0 is not allowed ")
+	except NameError :
+		print("Name error detected !")
+	except ValueError :
+		print("Wrong Value")
+	except :
+		print("Error ")  for all possible error (not good practise)

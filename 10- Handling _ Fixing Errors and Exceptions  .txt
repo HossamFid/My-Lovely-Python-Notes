@@ -1,0 +1,23 @@
+Syntax :
+
+
+File "code.py", line 3  				which line ?
+    for  i in list1					error location
+                  ^		
+SyntaxError: invalid syntax
+
+
+
+
+
+
+-----------------------
+-----------------------
+Exceptipn :
+
+print(x}
+
+Traceback (most recent call last):			
+  File "<pyshell#37>", line 1, in <module>				which line ?
+    x=10/0								error location 
+ZeroDivisionError: division by zero					error type

@@ -1,0 +1,37 @@
+
+<======Dictionary======>
+
+unordered set of key value pairs seperated by comma - they are very useful for storing data in specific format
+mutable 
+are indexed by KEY
+
+same as SETS using {} 
+- set is simply a collection of unique keys
+- dictionary is a mapping of unique keys to values
+
+myDict = {key:value}
+
+keys must be unique and should be immutable type (string - number - tuble)
+
+
+------------
+Methods 
+
+dict[key]
+dict[newKey]= "newValue"  add new key-value pair
+
+dict[key] = "newValue"    modify value
+
+del dict[key]
+del dict
+
+len()
+in 
+not in
+
+dict.keys()
+dict.values()    returns a list
+
+dict.items()     returns a list of tuples 
+
+list(dict.keys()| values()| items())

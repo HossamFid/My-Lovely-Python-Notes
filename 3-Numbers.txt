@@ -1,0 +1,39 @@
+mathematical operators 
+
++ - / // * ** % 
+
+-------
+comparison operators 
+
+> >=  < <= == !=  
+
+-------
+
+priority 
+1- ()
+2- raising to a power
+3- * / %
+4- + -
+
+--------
+methods 
+
+int()
+float()
+bool()
+abs() returns the absolute value 
+max()
+min()
+pow(base, exponent)
+
+--------
+
+logical operators 
+
+and 	 both the experssion 
+or	 at lease one 
+not	 negating an experssion
+
+
+None  - 0 - 0.0 - 0j complex number - [] - () - {}  ===> always Fasle 
+on other hands : 1 , 12 ,1.5 , [1,2,3] ====> always True

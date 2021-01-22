@@ -1,0 +1,22 @@
+
+<=====Ranges=====>
+
+it generates a list of integers starting at 0 and going up to but not including the value in between the ()
+
+range(x)
+range(start:stop:step)
+
+type()
+
+x = range(num)
+list(x)
+range[]
+
+in 
+not in
+
+range.index()
+
+NOTE : cant slice a range but u can convert it to a list and apply it 
+
+list(range)[:]
